@@ -1,14 +1,15 @@
-import React from 'react';
-import { NavMenu } from './components/HeaderComponent';
-
-import './App.css';
-
+import React from "react";
+import Main from "./components/MainComponent.js";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <NavMenu /> 
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Main />
+      </div>
+    </BrowserRouter>
   );
 }
 
