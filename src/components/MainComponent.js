@@ -3,10 +3,11 @@ import { NavMenu } from "./NavComponent";
 import Today from "./TodayComponent";
 import Portfolio from "./PortfolioComponent";
 import Profile from './ProfileComponent';
+import AddNewForm from './AddNewComponent';
 import { Layout } from "antd";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Footer, Sider } = Layout;
 
 class Main extends React.Component {
 
@@ -25,11 +26,12 @@ class Main extends React.Component {
             <NavMenu />
           </Sider>
           <Layout className="site-layout">
-            <Content style={{ margin: "10px 16px" }}>
+            <Content style={{ margin: "25px 15px" }}>
               <Switch>
                 <Route path="/today" component={TodayView} />
                 <Route exact path="/portfolio" component={Portfolio} />
                 <Route exact path="/profile" component={Profile} />
+                <Route exact path="/add-new" component={AddNewForm} />
                 <Redirect to="/" />
               </Switch>
             </Content>

@@ -1,12 +1,16 @@
 import React from "react";
 import { StockCard } from "./StockCardComponent";
+import DayGain from './DayGainComponent';
 
 class Today extends React.Component {
   render() {
     return (
       <React.Fragment>
         <h1>Today</h1>
-        <div>{/* Day Gain */}</div>
+        <div>
+            <h3>Gain/Loss</h3>
+           <DayGain /> 
+        </div>
         <div>
           <h3>Top Movers</h3>
           <StockCard />

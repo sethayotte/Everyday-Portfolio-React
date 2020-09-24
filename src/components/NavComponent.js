@@ -9,7 +9,7 @@ import {
 } from "@ant-design/icons";
 import logo from "../shared/portfolio-coin.png";
 
-const { Sider } = Layout;
+const { Sider, Content } = Layout;
 
 class NavMenu extends React.Component {
   state = {
@@ -48,6 +48,11 @@ class NavMenu extends React.Component {
             </Menu.Item>
           </Menu>
         </Sider>
+        <Layout className="site-layout">
+          <Content style={{ margin: '0 16px' }}>
+           <div></div>
+          </Content>
+        </Layout>
       </Layout>
     );
   }

@@ -16,8 +16,7 @@ class StockCard extends React.Component {
               <Statistic
                 title="[STOCK]"
                 value={11.28}
-                precision={2}
-                valueStyle={{ color: "#3f8600" }}
+                valueStyle={{ color: "#0FBE00", fontFamily: 'Calistoga' }}
                 prefix="$"
                 suffix={<ArrowUpOutlined />}
               />
@@ -29,7 +28,7 @@ class StockCard extends React.Component {
                 title="[STOCK]"
                 value={90.23}
                 precision={2}
-                valueStyle={{ color: "#cf1322" }}
+                valueStyle={{ color: "#F40000", fontFamily: 'Calistoga' }}                
                 prefix="$"
                 suffix={<ArrowDownOutlined />}
               />
@@ -41,7 +40,7 @@ class StockCard extends React.Component {
                 title="[STOCK]"
                 value={112.65}
                 precision={2}
-                valueStyle={{ color: "#cf1322" }}
+                valueStyle={{ color: "#F40000", fontFamily: 'Calistoga' }}                
                 prefix="$"
                 suffix={<ArrowDownOutlined />}
               />

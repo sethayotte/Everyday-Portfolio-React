@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Heebo:wght@300;400;600;800&display=swap');
+
 #components-layout-demo-side .logo {
   height: 32px;
   background: rgba(255, 255, 255, 0.2);
@@ -5,13 +7,20 @@
 }
 
 h1 {
+  font-family: 'Heebo', sans-serif;
   font-size: 48px;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 h3 {
+  font-family: 'Heebo', sans-serif;
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: 800;
+}
+
+Statistic.value {
+  font-family: 'Calistoga', sans-serif;
+  font-size: 18px;
 }
 
 .logo {
@@ -54,4 +63,40 @@ content div {
 
 .bottom-block {
   margin-top: 25px;
+}
+
+.portfolio-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: middle;
+}
+
+.add-button {
+  font-size: 36px;
+  color: #0FBE00;
+  margin-right: 30vw;
+  margin-top: 20px;
+}
+
+.close-button {
+  transform: rotate(45deg); 
+  font-size: 36px;
+  color: #8b8b8b;
+  margin-right: 30vw;
+  margin-top: 20px;
+}
+
+.add-new-form {
+  width: 50vw;
+}
+
+.holdings-table {
+  width: 60vw;
+}
+
+Form label {
+  font-family: 'Heebo', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
 }
