@@ -6,7 +6,14 @@ class Today extends React.Component {
     return (
       <React.Fragment>
         <h1>Today</h1>
-        <StockCard />
+        <div>{/* Day Gain */}</div>
+        <div>
+          <h3>Top Movers</h3>
+          <StockCard />
+          <h3 className="bottom-block">Top Losers</h3>
+          <StockCard />
+        </div>
+        <div>{/* News */}</div>
       </React.Fragment>
     );
   }

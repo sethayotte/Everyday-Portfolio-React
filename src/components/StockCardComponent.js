@@ -10,9 +10,9 @@ class StockCard extends React.Component {
         <Layout className="site-layout">
             <Content style={{ margin: '0 0px' }}>
       <div className="site-statistic-demo-card">
-        <Row gutter={14}>
-          <Col span={5}>
-            <Card>
+        <Row>
+          <Col>
+            <Card className="stock-card">
               <Statistic
                 title="[STOCK]"
                 value={11.28}
@@ -23,8 +23,8 @@ class StockCard extends React.Component {
               />
             </Card>
           </Col>
-          <Col span={5}>
-            <Card>
+          <Col>
+            <Card className="stock-card">
               <Statistic
                 title="[STOCK]"
                 value={90.23}
@@ -35,8 +35,8 @@ class StockCard extends React.Component {
               />
             </Card>
           </Col>
-          <Col span={5}>
-            <Card>
+          <Col>
+            <Card className="stock-card">
               <Statistic
                 title="[STOCK]"
                 value={112.65}

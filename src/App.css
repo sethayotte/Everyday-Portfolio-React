@@ -4,8 +4,14 @@
   margin: 16px;
 }
 
-Sider {
-  width: 50px;
+h1 {
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bolder;
 }
 
 .logo {
@@ -36,3 +42,16 @@ content div {
   color: white;
 }
 
+.stock-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 25px;
+  height: 150px;
+  width: 160px;
+  margin-right: 15px;
+}
+
+.bottom-block {
+  margin-top: 25px;
+}
