@@ -14,9 +14,9 @@ class StockCard extends React.Component {
           <Col>
             <Card className="stock-card">
               <Statistic
-                title="[STOCK]"
+                title={<span style={{ fontFamily: 'Heebo', color: "white", fontWeight: "800", fontSize: "36px" }}>SYMB</span>}
                 value={11.28}
-                valueStyle={{ color: "#0FBE00", fontFamily: 'Calistoga' }}
+                valueStyle={{ color: "#0FBE00", fontFamily: 'Calistoga', fontSize: "24px" }}
                 prefix="$"
                 suffix={<ArrowUpOutlined />}
               />
@@ -25,7 +25,8 @@ class StockCard extends React.Component {
           <Col>
             <Card className="stock-card">
               <Statistic
-                title="[STOCK]"
+                className="card-content"
+                title={<span style={{ fontFamily: 'Heebo', color: "white", fontWeight: "800", fontSize: "36px" }}>SYMB</span>}
                 value={90.23}
                 precision={2}
                 valueStyle={{ color: "#F40000", fontFamily: 'Calistoga' }}                
@@ -37,7 +38,7 @@ class StockCard extends React.Component {
           <Col>
             <Card className="stock-card">
               <Statistic
-                title="[STOCK]"
+                title={<span style={{ fontFamily: 'Heebo', color: "white", fontWeight: "800", fontSize: "36px" }}>SYMB</span>}
                 value={112.65}
                 precision={2}
                 valueStyle={{ color: "#F40000", fontFamily: 'Calistoga' }}                

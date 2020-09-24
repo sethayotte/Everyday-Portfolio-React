@@ -10,7 +10,7 @@ const AddNewForm = () => {
   };
 
   const formItemLayout =
-    formLayout === 'horizontal'
+    formLayout === 'vertical'
       ? {
           labelCol: {
             span: 4,
@@ -21,7 +21,7 @@ const AddNewForm = () => {
         }
       : null;
   const buttonItemLayout =
-    formLayout === 'horizontal'
+    formLayout === 'vertical'
       ? {
           wrapperCol: {
             span: 14,
@@ -55,7 +55,7 @@ const AddNewForm = () => {
         <Form.Item name="input-number" noStyle>
           <InputNumber placeholder="5" min={1} max={10} />
         </Form.Item>
-        <span className="ant-form-text"> machines</span>
+        <span className="ant-form-text"> shares</span>
       </Form.Item>
       <h3>Estimated Value</h3>
       <Statistic

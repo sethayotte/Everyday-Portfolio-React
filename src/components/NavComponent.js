@@ -25,6 +25,7 @@ class NavMenu extends React.Component {
     return (
       <Layout style={{ minHeight: "100vh" }}>
         <Sider
+          style={{ backgroundColor: "#0f0f0f" }}
           collapsible
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
@@ -35,15 +36,27 @@ class NavMenu extends React.Component {
             </Link>
           </div>
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <Menu.Item key="1" icon={<DollarCircleFilled />}>
+            <Menu.Item 
+            key="1" 
+            icon={<DollarCircleFilled />}
+            style={{ backgroundColor: "#0f0f0f", color: "#0FBE00", margin: "none" }}
+            >
               <Link to="/today">Today</Link>
             </Menu.Item>
 
-            <Menu.Item key="2" icon={<BankFilled />}>
+            <Menu.Item 
+            key="2" 
+            icon={<BankFilled />}
+            style={{ backgroundColor: "#0f0f0f", color: "#0FBE00", margin: "none" }}
+            >
               <Link to="/portfolio">Portfolio</Link>
             </Menu.Item>
 
-            <Menu.Item key="3" icon={<SettingFilled />}>
+            <Menu.Item 
+            key="3" 
+            icon={<SettingFilled />}
+            style={{ backgroundColor: "#0f0f0f", color: "#0FBE00", margin: "none" }}
+            >
               <Link to="/profile">Profile</Link>
             </Menu.Item>
           </Menu>
