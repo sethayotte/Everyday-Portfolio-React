@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+import { StockCard } from "./StockCardComponent";
 
 class Today extends React.Component {
-    render() {
-        return (
-            <h1>Today</h1>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Today</h1>
+        <StockCard />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Today;

@@ -4,6 +4,10 @@
   margin: 16px;
 }
 
+Sider {
+  width: 50px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -32,7 +36,3 @@ content div {
   color: white;
 }
 
-.site-statistic-demo-card {
-  background: #ececec;
-  padding: 30px;
-}
