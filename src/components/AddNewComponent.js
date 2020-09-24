@@ -1,24 +1,27 @@
-import React from 'react';
+import React from "react";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import AddNewForm from './NewHoldingFormComponent';
+import AddNewForm from "./NewHoldingFormComponent";
+import { Tooltip } from "antd";
 
 class AddNew extends React.Component {
-    render() {
-        return (
-            <React.Fragment>
+  render() {
+    return (
+      <React.Fragment>
         <div className="portfolio-header">
           <h1>Add New</h1>
           <Link to="/portfolio">
-            <PlusCircleOutlined className="close-button" />
+            <Tooltip placement="right" title="Return to Portfolio">
+              <PlusCircleOutlined className="close-button" />
+            </Tooltip>
           </Link>
         </div>
         <div>
           <AddNewForm />
         </div>
       </React.Fragment>
-        );
-    }
+    );
+  }
 }
 
 export default AddNew;

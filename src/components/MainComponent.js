@@ -3,7 +3,7 @@ import { NavMenu } from "./NavComponent";
 import Today from "./TodayComponent";
 import Portfolio from "./PortfolioComponent";
 import Profile from './ProfileComponent';
-import AddNewForm from './AddNewComponent';
+import AddNew from './AddNewComponent';
 import { Layout } from "antd";
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -31,7 +31,7 @@ class Main extends React.Component {
                 <Route path="/today" component={TodayView} />
                 <Route exact path="/portfolio" component={Portfolio} />
                 <Route exact path="/profile" component={Profile} />
-                <Route exact path="/add-new" component={AddNewForm} />
+                <Route exact path="/add-new" component={AddNew} />
                 <Redirect to="/" />
               </Switch>
             </Content>
