@@ -4,12 +4,39 @@ import Today from "./TodayComponent";
 import Portfolio from "./PortfolioComponent";
 import Profile from './ProfileComponent';
 import AddNew from './AddNewComponent';
+// import finnhub from 'finnhub';
 import { Layout } from "antd";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 const { Content, Footer, Sider } = Layout;
 
+const finnhub = require('finnhub');
+ 
+const api_key = finnhub.ApiClient.instance.authentications['api_key'];
+api_key.apiKey = "btmgh5v48v6uocf2o8mg" // Replace this
+const finnhubClient = new finnhub.DefaultApi()
+
+
 class Main extends React.Component {
+
+
+componentDidMount() {
+  finnhubClient.quote("AAPL", (error, data, response) => {
+    console.log(data)
+});
+
+finnhubClient.stockSymbols("US", (error, data, response) => {
+  console.log(data)
+});
+
+finnhubClient.companyNews("AAPL", "2020-01-01", "2020-05-01", (error, data, response) => {
+  if (error) {
+      console.error(error);
+  } else {
+      console.log(data)
+  }
+});
+}
 
   render() {
 

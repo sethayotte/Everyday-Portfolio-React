@@ -21,6 +21,13 @@ h3 {
   color: white;
 }
 
+h4 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -115,4 +122,26 @@ Form label {
   font-family: 'Heebo', sans-serif;
   font-size: 24px;
   font-weight: 800;
+}
+
+.list-item {
+  background-color: #0f0f0f;
+  -webkit-box-shadow: 0px 8px 25px -7px rgba(167,167,167,0.3);
+-moz-box-shadow: 0px 8px 25px -7px rgba(167,167,167,0.3);
+box-shadow: 0px 8px 25px -7px rgba(138, 95, 95, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.list-item p {
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
 }
