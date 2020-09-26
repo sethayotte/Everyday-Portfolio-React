@@ -8,7 +8,7 @@ import AddNew from './AddNewComponent';
 import { Layout } from "antd";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-const { Content, Footer, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 const finnhub = require('finnhub');
  

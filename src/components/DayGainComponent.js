@@ -1,5 +1,4 @@
 import React from "react";
-import { Statistic } from "antd";
 
 class DayGain extends React.Component {
   render() {
