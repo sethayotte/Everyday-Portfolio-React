@@ -6,7 +6,7 @@ class DayGain extends React.Component {
     return (
       <div>
         <h2>$13,073.12</h2>
-        <h2>(+7.3%)</h2>
+        <h2>(+7.2%)</h2>
       </div>
     );
   }
