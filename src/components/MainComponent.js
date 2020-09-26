@@ -25,17 +25,17 @@ componentDidMount() {
     console.log(data)
 });
 
-finnhubClient.stockSymbols("US", (error, data, response) => {
-  console.log(data)
-});
+// finnhubClient.stockSymbols("US", (error, data, response) => {
+//   console.log(data)
+// });
 
-finnhubClient.companyNews("AAPL", "2020-01-01", "2020-05-01", (error, data, response) => {
-  if (error) {
-      console.error(error);
-  } else {
-      console.log(data)
-  }
-});
+// finnhubClient.companyNews("AAPL", "2020-01-01", "2020-05-01", (error, data, response) => {
+//   if (error) {
+//       console.error(error);
+//   } else {
+//       console.log(data)
+//   }
+// });
 }
 
   render() {
