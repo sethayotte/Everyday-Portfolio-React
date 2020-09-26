@@ -49,6 +49,8 @@ h5 {
 
 .logo img {
   margin: 15px;
+  margin-bottom: 25px;
+  margin-left: 20px;
 }
 
 .nav-link-text:link {
@@ -221,4 +223,36 @@ box-shadow: 0px 8px 25px -7px rgba(138, 95, 95, 0.2);
   background-color: white;
   color: rgb(2, 3, 15);
   font-weight: 600;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-header h1, h4 {
+  margin-bottom: 0px;
+  line-height: 100%;
+  margin-left: 25px;
+}
+
+.general-sections {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.general-sections div {
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+.general, .security h4 {
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+.general h4 {
+  margin-left: 0px;
 }
