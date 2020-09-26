@@ -28,6 +28,13 @@ h4 {
   color: white;
 }
 
+h5 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -35,6 +42,10 @@ h4 {
 
 .logo img {
   margin: 15px;
+}
+
+.nav-link-text:link {
+  color: white;
 }
 
 .site-layout {
@@ -144,4 +155,39 @@ box-shadow: 0px 8px 25px -7px rgba(138, 95, 95, 0.3);
   font-family: 'Heebo', sans-serif;
   font-size: 24px;
   font-weight: 600;
+}
+
+.form-field {
+  background-color: #0f0f0f;
+  color: white;
+  border: none;
+  height: 50px;
+  font-size: 24px;
+  margin-bottom: 35px;
+  -webkit-box-shadow: 0px 8px 25px -7px rgba(167,167,167,0.2);
+-moz-box-shadow: 0px 8px 25px -7px rgba(167,167,167,0.2);
+box-shadow: 0px 8px 25px -7px rgba(138, 95, 95, 0.2);
+}
+
+.form-field-dropdown {
+  background-color: #0f0f0f;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 50vw;
+  font-size: 24px;
+  margin-bottom: 35px;
+  -webkit-box-shadow: 0px 8px 25px -7px rgba(167,167,167,0.2);
+-moz-box-shadow: 0px 8px 25px -7px rgba(167,167,167,0.2);
+box-shadow: 0px 8px 25px -7px rgba(138, 95, 95, 0.2);
+}
+
+.form-field:focus {
+  border: 0.5px grey solid;
+}
+
+.field-label {
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  font-size: 18px;
 }

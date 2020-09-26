@@ -40,23 +40,20 @@ const AddNewForm = () => {
         }}
         onValuesChange={onFormLayoutChange}
       >
-        <Form.Item label="Position Type">
-          <Select placeholder="Select One">
-            <Select.Option value="stock">Stock</Select.Option>
-            <Select.Option value="etf">ETF</Select.Option>
-            <Select.Option value="mutual-fund">Mutual Fund</Select.Option>
-            <Select.Option value="other asset">Other Asset</Select.Option>
-          </Select>
-        </Form.Item>
-        <Form.Item label="Name/Symbol">
-          <Input placeholder="AAPL" />
-        </Form.Item>
-        <Form.Item label="Size of Holding">
-        <Form.Item name="input-number" noStyle>
-          <InputNumber placeholder="5" min={1} max={10} />
-        </Form.Item>
+        <h5>Position Type</h5>
+        <Select defaultValue="Select One" className="form-field-dropdown" size="large" bordered={false}>
+      <Select.Option value="stock">Stock</Select.Option>
+      <Select.Option value="etf">ETF</Select.Option>
+      <Select.Option value="mutual-fund">Mutual Fund</Select.Option>
+      <Select.Option value="other-asset">Other Asset</Select.Option>
+    </Select>
+        
+    <h5>Name/Symbol</h5>
+          <Input size="large" className="form-field" placeholder="AAPL" />
+
+        <h5>Size of Holding</h5>
+          <InputNumber size="large" className="form-field" placeholder="5" min={1} max={1000} />
         <span className="ant-form-text"> shares</span>
-      </Form.Item>
       <h3>Estimated Value</h3>
       <Statistic
                 value={13073.12}

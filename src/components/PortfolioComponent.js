@@ -1,7 +1,6 @@
 import React from "react";
 import { PlusCircleFilled } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import Holdings from './HoldingComponent';
 import HoldingList from './TestHoldingListComponent';
 import { Tooltip } from "antd";
 
@@ -21,10 +20,10 @@ class Portfolio extends React.Component {
             <HoldingList />
         </div>
         <div>
-            <Holdings />
+            <HoldingList />
         </div>
         <div>
-            <Holdings />
+            <HoldingList />
         </div>
       </React.Fragment>
     );

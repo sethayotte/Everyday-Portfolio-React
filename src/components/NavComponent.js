@@ -23,7 +23,7 @@ class NavMenu extends React.Component {
 
   render() {
     return (
-      <Layout style={{ minHeight: "100vh" }}>
+      <Layout style={{ minHeight: "100vh", backgroundColor: "#0f0f0f" }}>
         <Sider
           style={{ backgroundColor: "#0f0f0f" }}
           collapsible
@@ -35,29 +35,29 @@ class NavMenu extends React.Component {
               <img src={logo} alt="ep-logo" height="30" />
             </Link>
           </div>
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
+          <Menu style={{ backgroundColor: "#0f0f0f", border: "none" }} defaultSelectedKeys={["1"]} mode="inline">
             <Menu.Item 
             key="1" 
             icon={<DollarCircleFilled />}
-            style={{ backgroundColor: "#0f0f0f", color: "#0FBE00", margin: "none" }}
+            style={{ backgroundColor: "#0f0f0f", color: "#f4f4f4", margin: "none" }}
             >
-              <Link to="/today">Today</Link>
+              <Link to="/today" style={{ color: "white" }}>Today</Link>
             </Menu.Item>
 
             <Menu.Item 
             key="2" 
             icon={<BankFilled />}
-            style={{ backgroundColor: "#0f0f0f", color: "#0FBE00", margin: "none" }}
+            style={{ backgroundColor: "#0f0f0f", color: "#f4f4f4", margin: "none" }}
             >
-              <Link to="/portfolio">Portfolio</Link>
+              <Link to="/portfolio" style={{ color: "white" }}>Portfolio</Link>
             </Menu.Item>
 
             <Menu.Item 
             key="3" 
             icon={<SettingFilled />}
-            style={{ backgroundColor: "#0f0f0f", color: "#0FBE00", margin: "none" }}
+            style={{ backgroundColor: "#0f0f0f", color: "#f4f4f4", margin: "none" }}
             >
-              <Link to="/profile">Profile</Link>
+              <Link to="/profile" style={{ color: "white" }}>Profile</Link>
             </Menu.Item>
           </Menu>
         </Sider>
