@@ -2,11 +2,6 @@ import React from "react";
 import { Layout, Menu } from "antd";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
-import {
-  DollarCircleFilled,
-  BankFilled,
-  SettingFilled,
-} from "@ant-design/icons";
 import logo from "../shared/today_white.png";
 import Icon from '@ant-design/icons';
 

@@ -17,17 +17,24 @@ api_key.apiKey = "btmgh5v48v6uocf2o8mg" // Replace this
 const finnhubClient = new finnhub.DefaultApi()
 
 
+
 class Main extends React.Component {
 
+  state = {
+    currentPrice: null
+  }
 
 componentDidMount() {
   finnhubClient.quote("AAPL", (error, data, response) => {
-    console.log(data)
+    const { h, l, c } = data;
+    console.log(c);
+    console.log(l);
+    console.log(h);
 });
 
-// finnhubClient.stockSymbols("US", (error, data, response) => {
-//   console.log(data)
-// });
+finnhubClient.stockSymbols("US", (error, data, response) => {
+  console.log(data)
+});
 
 // finnhubClient.companyNews("AAPL", "2020-01-01", "2020-05-01", (error, data, response) => {
 //   if (error) {
@@ -38,14 +45,9 @@ componentDidMount() {
 // });
 }
 
+
   render() {
-
-    const TodayView = () => {
-        return (
-            <Today />
-        );
-    }
-
+    const { currentPrice } = this.state;
     return (
       <React.Fragment>
         <Layout style={{ minHeight: "100vh" }}>
@@ -55,8 +57,8 @@ componentDidMount() {
           <Layout className="site-layout">
             <Content style={{ margin: "25px 15px" }}>
               <Switch>
-                <Route path="/today" component={TodayView} />
-                <Route exact path="/portfolio" component={Portfolio} />
+                <Route path="/today" component={Today} />
+                <Route exact path="/portfolio" render={(props) => ( <Portfolio {...props} currentPrice={currentPrice} /> )} />
                 <Route exact path="/profile" component={Profile} />
                 <Route exact path="/add-new" component={AddNew} />
                 <Redirect to="/" />
