@@ -17,24 +17,29 @@ api_key.apiKey = "btmgh5v48v6uocf2o8mg" // Replace this
 const finnhubClient = new finnhub.DefaultApi()
 
 
-
 class Main extends React.Component {
 
   state = {
+    loading: true,
     currentPrice: null,
   };
 
-componentDidMount() {
-  finnhubClient.quote("AAPL", (error, data, response) => {
-    const { h, l, c } = data;
-    console.log(h);
-    console.log(l);
-    console.log(c);
-});
+async componentDidMount() {
+  const url = "https://finnhub.io/api/v1/quote?symbol=AAPL&token=btmgh5v48v6uocf2o8mg";
+  const response = await fetch(url);
+  const priceQuote = await response.json();
+  this.setState({ currentPrice: priceQuote.c, loading: false });
+  console.log(this.state.currentPrice);
+//   finnhubClient.quote("AAPL", (error, data, response) => {
+//     const { h, l, c } = data;
+//     console.log(h);
+//     console.log(l);
+//     console.log(c);
+// });
 
-finnhubClient.stockSymbols("US", (error, data, response) => {
-  console.log(data)
-});
+// finnhubClient.stockSymbols("US", (error, data, response) => {
+//   console.log(data)
+// });
 
 // finnhubClient.companyNews("AAPL", "2020-01-01", "2020-05-01", (error, data, response) => {
 //   if (error) {
@@ -58,7 +63,7 @@ finnhubClient.stockSymbols("US", (error, data, response) => {
             <Content style={{ margin: "25px 15px" }}>
               <Switch>
                 <Route path="/today" component={Today} />
-                <Route exact path="/portfolio" render={(props) => ( <Portfolio {...props} currentPrice={currentPrice} /> )} />
+                <Route exact path="/portfolio" render={(props) => ( <Portfolio {...props} state={this.state} /> )} />
                 <Route exact path="/profile" component={Profile} />
                 <Route exact path="/add-new" component={AddNew} />
                 <Redirect to="/" />

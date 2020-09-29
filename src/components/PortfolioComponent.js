@@ -11,7 +11,7 @@ class Portfolio extends React.Component {
       <React.Fragment>
         <div className="portfolio-header">
           <h1>Portfolio</h1>
-          <h3>The current AAPL price is ${this.props.currentPrice}.</h3>
+          <h3>The current AAPL price is ${this.props.state.loading || !this.props.state.currentPrice ? "loading..." : this.props.state.currentPrice }.</h3>
           <Link to="/add-new">
           <Tooltip placement="right" title="Add New">
             <PlusCircleFilled className="add-button" />
