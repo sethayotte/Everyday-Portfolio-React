@@ -21,15 +21,15 @@ const finnhubClient = new finnhub.DefaultApi()
 class Main extends React.Component {
 
   state = {
-    currentPrice: null
-  }
+    currentPrice: null,
+  };
 
 componentDidMount() {
   finnhubClient.quote("AAPL", (error, data, response) => {
     const { h, l, c } = data;
-    console.log(c);
-    console.log(l);
     console.log(h);
+    console.log(l);
+    console.log(c);
 });
 
 finnhubClient.stockSymbols("US", (error, data, response) => {
