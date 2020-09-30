@@ -1,7 +1,12 @@
 import React from 'react';
 import { Form, Input, Button, Select, InputNumber } from 'antd';
 
+const toInputUppercase = e => {
+  e.target.value = ("" + e.target.value).toUpperCase();
+};
+
 const AddNewForm = () => {
+
   return (
     <React.Fragment>
       <Form>
@@ -13,8 +18,8 @@ const AddNewForm = () => {
       <Select.Option value="other-asset">Other Asset</Select.Option>
     </Select>
         
-    <h5>Name/Symbol</h5>
-          <Input size="large" className="form-field" placeholder="AAPL" />
+    <h5>Ticker/Symbol</h5>
+          <Input type="text" onInput={toInputUppercase} size="large" className="form-field" maxLength={5} spellCheck="false" placeholder="AAPL" />
 
         <h5>Size of Holding</h5>
           <InputNumber size="large" className="form-field" placeholder="5" min={1} max={1000} />

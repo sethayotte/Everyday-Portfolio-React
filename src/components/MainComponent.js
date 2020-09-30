@@ -22,14 +22,21 @@ class Main extends React.Component {
   state = {
     loading: true,
     currentPrice: null,
+    marketList: [],
   };
 
 async componentDidMount() {
-  const url = "https://finnhub.io/api/v1/quote?symbol=AAPL&token=btmgh5v48v6uocf2o8mg";
-  const response = await fetch(url);
+  const symbolCall = "https://finnhub.io/api/v1/quote?symbol=AAPL&token=btmgh5v48v6uocf2o8mg";
+  const response = await fetch(symbolCall);
   const priceQuote = await response.json();
   this.setState({ currentPrice: priceQuote.c, loading: false });
   console.log(this.state.currentPrice);
+
+  const marketCall = "https://finnhub.io/api/v1/stock/symbol?exchange=US&token=btmgh5v48v6uocf2o8mg";
+  const response1 = await fetch(marketCall);
+  const market = await response1.json();
+  this.setState({ marketList: market });
+  console.log(this.state.marketList);
 //   finnhubClient.quote("AAPL", (error, data, response) => {
 //     const { h, l, c } = data;
 //     console.log(h);
