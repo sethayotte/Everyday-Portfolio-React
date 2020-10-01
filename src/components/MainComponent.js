@@ -27,7 +27,7 @@ class Main extends React.Component {
   };
 
 async componentDidMount() {
-  const symbolCall = "https://finnhub.io/api/v1/quote?symbol=" + {SYMBOL} + "&token=btmgh5v48v6uocf2o8mg";
+  const symbolCall = "https://finnhub.io/api/v1/quote?symbol=" + "AAPL" + "&token=btmgh5v48v6uocf2o8mg";
   const response = await fetch(symbolCall);
   const priceQuote = await response.json();
   this.setState({ currentPrice: priceQuote.c, loading: false });
