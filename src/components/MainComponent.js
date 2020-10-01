@@ -17,6 +17,7 @@ api_key.apiKey = "btmgh5v48v6uocf2o8mg" // Replace this
 const finnhubClient = new finnhub.DefaultApi()
 
 
+
 class Main extends React.Component {
 
   state = {
@@ -26,7 +27,7 @@ class Main extends React.Component {
   };
 
 async componentDidMount() {
-  const symbolCall = "https://finnhub.io/api/v1/quote?symbol=AAPL&token=btmgh5v48v6uocf2o8mg";
+  const symbolCall = "https://finnhub.io/api/v1/quote?symbol=" + {SYMBOL} + "&token=btmgh5v48v6uocf2o8mg";
   const response = await fetch(symbolCall);
   const priceQuote = await response.json();
   this.setState({ currentPrice: priceQuote.c, loading: false });
@@ -35,8 +36,14 @@ async componentDidMount() {
   const marketCall = "https://finnhub.io/api/v1/stock/symbol?exchange=US&token=btmgh5v48v6uocf2o8mg";
   const response1 = await fetch(marketCall);
   const market = await response1.json();
-  this.setState({ marketList: market });
+  const marketArr = [];
+  for (let item in market) {
+    marketArr.push(market[item].symbol);
+  }
+  this.setState({ marketList: marketArr });
   console.log(this.state.marketList);
+  
+  
 //   finnhubClient.quote("AAPL", (error, data, response) => {
 //     const { h, l, c } = data;
 //     console.log(h);
