@@ -36,10 +36,11 @@ async componentDidMount() {
   const marketCall = "https://finnhub.io/api/v1/stock/symbol?exchange=US&token=btmgh5v48v6uocf2o8mg";
   const response1 = await fetch(marketCall);
   const market = await response1.json();
-  const marketArr = [];
-  for (let item in market) {
-    marketArr.push(market[item].symbol);
-  }
+  const marketArr = market.map(m => m.symbol);
+  // const marketArr = [];
+  // for (let item in market) {
+  //   marketArr.push(market[item].symbol);
+  // }
   this.setState({ marketList: marketArr });
   console.log(this.state.marketList);
   
