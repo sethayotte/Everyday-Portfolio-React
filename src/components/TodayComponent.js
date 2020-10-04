@@ -19,7 +19,7 @@ class Today extends React.Component {
             <StockCard />
           </div>
         </div>
-        <div>{/* News */}</div>
+        <div>{/* News Blocks */}</div>
       </React.Fragment>
     );
   }
