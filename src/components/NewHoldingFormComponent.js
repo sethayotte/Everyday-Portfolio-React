@@ -90,7 +90,7 @@ class AddNewForm extends React.Component {
           <h2>$--.--</h2>
 
           <Button className="form-button" type="submit">
-            Add
+            Add +
           </Button>
         </Form>
       </React.Fragment>
