@@ -84,7 +84,7 @@ class AddNewForm extends React.Component {
             className="form-field"
             placeholder="5"
             min={1}
-            max={1000}
+            max={500}
           />
           <h3>Estimated Value</h3>
           <h2>$--.--</h2>
