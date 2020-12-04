@@ -58,6 +58,7 @@ class AddNewForm extends React.Component {
             <Select.Option>Other Asset</Select.Option>
           </Select>
 
+
           <h5 htmlFor="symbolInput">Ticker/Symbol</h5>
           <Input
             type="text"
@@ -72,7 +73,7 @@ class AddNewForm extends React.Component {
             spellCheck="false"
             placeholder="AAPL"
           />
-  
+    
           <h5 htmlFor="numShares">Size of Holding</h5>
           <InputNumber
           type="text"
